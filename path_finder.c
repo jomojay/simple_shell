@@ -58,8 +58,8 @@ char *build_ap(char *token, char *value)
 }
 /**
  * _getenv - Gets The Value Of Enviroment Variable By Name
- * @name: Environment Variable Name
- * Return: The Value of the Environment Variable Else NULL.
+ * @name: Environment variable name
+ * Return: Environment variable value or NULL.
  */
 char *_getenv(char *name)
 {
@@ -67,6 +67,11 @@ char *_getenv(char *name)
 	char *value;
 	int i, j, k;
 
+	if (name == NULL)
+	{
+		perror("name is NULL");
+		return (NULL);
+	}
 	name_len = _strlen(name);
 	for (i = 0 ; environ[i]; i++)
 	{
@@ -76,7 +81,6 @@ char *_getenv(char *name)
 			value = malloc(sizeof(char) * value_len);
 			if (!value)
 			{
-				free(value);
 				perror("unable to alloc");
 				return (NULL);
 			}
