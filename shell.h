@@ -28,6 +28,8 @@ typedef struct bulltin
 	int (*fun)(char **line, int er);
 } bul_t;
 
+extern char **environ;
+
 /** ### String functions ### */
 char *_strtok(char *str, const char *tok);
 unsigned int delim_check(char c, const char *str);
