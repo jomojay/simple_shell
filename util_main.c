@@ -46,7 +46,7 @@ int check_builtin(char **cmd)
 {
 	int i = 0;
 
-	bul_t fun[] = {
+	buil_t fun[] = {
 		{"cd", NULL},
 		{"help", NULL},
 		{"echo", NULL},

@@ -22,11 +22,11 @@
 * @command:pointer to char
 * @fun:fun to excute when bultin true
 */
-typedef struct bulltin
+typedef struct builtin
 {
 	char *command;
 	int (*fun)(char **line, int er);
-} bul_t;
+} buil_t;
 
 extern char **environ;
 

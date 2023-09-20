@@ -10,7 +10,7 @@
 int handle_builtin(char **cmd, int status)
 {
 	int i = 0;
-	bul_t builtins[] = {
+	buil_t builtins[] = {
 		{"cd", change_dir},
 		{"env", dis_env},
 		{"echo", echo_var},
